@@ -1,0 +1,16 @@
+--- origsrc/xnee-3.08/doc/Makefile.am	2010-06-16 18:03:22.000000000 -0500
++++ src/xnee-3.08/doc/Makefile.am	2011-02-09 03:43:22.791817400 -0600
+@@ -116,11 +116,11 @@ ${IMG_JPG}: ${IMG_EPS}
+ 
+ 
+ if BUILDDOC
+-install: 
++install-data-local: 
+ 	mkdir -p $(DESTDIR)/$(docdir)
+ 	cp $(MANUALS) $(GEN_IMAGES_TO_INSTALL)  $(DESTDIR)$(docdir)/
+ else
+-install: 
++install-data-local: 
+ 	echo not installing docs
+ endif
+ 

@@ -1,0 +1,6 @@
+category: X11
+requires: libatk1.0_0 libgdk_pixbuf2.0_0 libglib2.0_0 libgtk2.0_0 libX11_6 libXi6 libXtst6
+sdesc: "X11 event recorder and replayer"
+ldesc: "GNU Xnee is a suite of programs that can record, replay and 
+distribute user actions under the X11 environment. Think of it as a 
+robot that can imitate the job you just did."

@@ -1,0 +1,19 @@
+--- origsrc/xnee-3.08/libxnee/test/Makefile.am	2009-12-30 10:13:10.000000000 -0600
++++ src/xnee-3.08/libxnee/test/Makefile.am	2011-02-09 04:02:38.599857900 -0600
+@@ -4,7 +4,7 @@ TESTFEEDBACK = testfeedback
+ TESTPRINT = testprint
+ TESTDISP = testdisplay
+ TESTCALLBACK = testcallback
+-lib_LTLIBRARIES = libtestcb.la
++check_LTLIBRARIES = libtestcb.la
+ 
+ noinst_PROGRAMS = $(LIBTEST) $(TESTSETGET) $(TESTFEEDBACK) $(TESTPRINT) $(TESTDISP) $(TESTCALLBACK)
+ TEST_WRAPPER=./test-wrapper.sh
+@@ -30,6 +30,7 @@ testdisplay_SOURCES = disp.c
+ testcallback_SOURCES = callback.c
+ libtestcb_la_SOURCES = callback_so.c
+ libtestcb_la_CFLAGS =  $(AM_CFLAGS)
++libtestcb_la_LDFLAGS = -rpath $(libdir) -avoid-version -no-undefined
+ 
+ test: 
+ 	chmod a+x ./test-wrapper.sh 
