@@ -1,5 +1,5 @@
 NAME="xnee"
-VERSION=3.08
+VERSION=3.16
 RELEASE=1
 CATEGORY="X11"
 SUMMARY="X11 event recorder and replayer"
@@ -14,9 +14,8 @@ PATCH_URI="
 	3.08-libc-sem_init.patch
 	3.08-libtestcb.patch
 	3.08-vpath.patch
+	3.16-Wimplicit-decls.patch
 "
-
-CYGCONF_ARGS="--disable-gnome-applet"
 
 src_install() {
 	cd ${B}

@@ -1,0 +1,11 @@
+--- origsrc/xnee-3.16/cnee/include/cnee_demo.h	2007-06-28 17:27:12.000000000 -0500
++++ src/xnee-3.16/cnee/include/cnee_demo.h	2013-11-11 19:18:38.237823100 -0600
+@@ -32,6 +32,8 @@
+ int
+ cnee_demonstration (xnee_data *xd);
+ 
++int
++cnee_record_replay (xnee_data *xd);
+ 
+ 
+ #endif /* CNEE_DEMO_H */
