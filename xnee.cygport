@@ -1,0 +1,26 @@
+NAME="xnee"
+VERSION=3.08
+RELEASE=1
+CATEGORY="X11"
+SUMMARY="X11 event recorder and replayer"
+DESCRIPTION="GNU Xnee is a suite of programs that can record, replay and
+distribute user actions under the X11 environment. Think of it as a robot
+that can imitate the job you just did."
+HOMEPAGE="http://www.sandklef.com/xnee/"
+SRC_URI="mirror://gnu/xnee/${NAME}-${VERSION}.tar.gz"
+
+PATCH_URI="
+	3.08-install-info.patch
+	3.08-libc-sem_init.patch
+	3.08-libtestcb.patch
+	3.08-vpath.patch
+"
+
+CYGCONF_ARGS="--disable-gnome-applet"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	make_desktop_entry gnee "Gnee" xnee "Utility;GTK"
+}
